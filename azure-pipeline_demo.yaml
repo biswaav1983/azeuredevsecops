@@ -1,0 +1,10 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    echo "My First demo YAML file for Azeure DevSecOps Pipeline"
+  displayName: "Print Console Text for Demo"
