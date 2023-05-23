@@ -17,6 +17,12 @@ The docker network created by `docker-compose` maps pretty well to a multi-tier 
 
 ![](exercises/assets/arch.png)
 
+## Connecting DB
+
+docker exec -it f522e596e603 psql -U postgres vulnado
+
+SELECT * FROM <tablename>;
+
 ## Exercises
 
 * [SQL Injection](exercises/01-sql-injection.md)
