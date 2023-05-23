@@ -20,6 +20,8 @@ The docker network created by `docker-compose` maps pretty well to a multi-tier 
 ## Connecting DB
 
 docker exec -it container-id psql -U postgres vulnado
+\l
+\dt
 
 SELECT * FROM tablename;
 

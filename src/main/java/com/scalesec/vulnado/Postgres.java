@@ -48,7 +48,7 @@ public class Postgres {
             insertUser("bob", "BobPassword!");
             insertUser("eve", "$EVELknev^l");
             insertUser("rick", "!GetSchwifty!");
-
+	    insertUser("avijit", "admin123");
             insertComment("rick", "cool dog m8");
             insertComment("alice", "OMG so cute!");
             c.close();
