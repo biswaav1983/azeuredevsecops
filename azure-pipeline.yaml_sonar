@@ -1,0 +1,32 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    ls -la
+    npm install
+  displayName: 'Install dependencies'
+
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'avispiku'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'bookiesecops'
+    cliProjectName: 'bookiesecops'
+    cliSources: '.'
+    
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1    
+  inputs:
+    pollingTimeoutSec: '300'
+  displayName: 'Scan the BookieApp using Sonar'
+
+
+
